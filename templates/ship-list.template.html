@@ -1,0 +1,23 @@
+ <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+              <p>Search:</p>
+              <input ng-model="$ctrl.query">
+          </div>
+          <div class="col-md-8">
+            	 <ul>
+            	 		<li ng-repeat="shippart in $ctrl.shipparts | filter:$ctrl.query">
+				<!--  	<li ng-repeat="shippart in $ctrl.shipparts"> -->
+				   		<span>{{shippart.name}}</span>
+				   		<p>{{shippart.snippet}}</p>
+				   		<span>{{shippart.duration}}</span>
+
+				   	</li>
+				<!--    	<li>{{scope.shipparts}}</li> -->
+				  </ul>
+          </div> 
+          
+        </div>
+        
+      </div>
+
